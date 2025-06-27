@@ -4,14 +4,21 @@
   box-sizing: border-box;
 }
 
-body {
-  display: flex;
+
+ body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #f4f6f9;
   color: #333;
-  height: 100vh;
-  overflow: hidden;
+  display: flex;
+  flex-direction: row; 
 }
+
+
+
+
 
 
 .short {
