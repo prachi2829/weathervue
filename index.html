@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherVue</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400&display=swap" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="icon" href="assets/logo.png" type="image/png" />
+
+</head>
+
+<body>
+    <div class="short">
+        <div class="search">
+            <input class="input-box" type="text" placeholder="Search for places..."/> 
+            <button id="searchBtn" title="Search">
+                <span class="material-symbols-outlined">search</span>
+            </button>
+        </div>
+        <div class="weather-img"><img src="assets/cloud.png" class="weather-img weather-image" /></div>
+        <div class="weather">
+            <div class="temp"><div class="tempnum"></div><div class="not">&deg C</div> </div>
+            <div class="description"></div>
+            <div class="calendar">
+                <div class="day"></div>
+                <div class="date"></div>
+            </div>
+        </div>
+        <div class="place"></div>
+    </div>
+    <div class="detail">
+        <div class="header">
+        <div class="webname">WeatherVue</div>
+        <label class="theme-switch">
+        <input type="checkbox" id="toggleTheme" />
+        <span class="slider"></span>
+         </label>
+        </div>
+
+        <div class="highlights">
+            <h3>Today's Highlights</h3>
+            <div class="insights">
+                <div class="insight-box" class="humidity">
+                    <div class="name">Humidity <span class="material-symbols-outlined">humidity_mid</span></div>
+                    <div class="humid-per"></div>
+                </div>
+                <div class="insight-box" class="wind">
+                    <div class="name">Wind <span class="material-symbols-outlined">airwave</span></div>
+                    <div class="wind-speed"></div>
+                </div>
+                <div class="insight-box">
+                    <div class="name">Cloudiness <span class="material-symbols-outlined">cloud</span></div>
+                    <div class="cloudiness"></div>
+                </div>
+                <div class="insight-box">
+                    <div class="name">Visibility <span class="material-symbols-outlined">visibility</span></div>
+                    <div class="visibility"></div>
+                </div>
+                <div class="insight-box">
+                    <div class="name">Sunrise <span class="material-symbols-outlined">sunny</span></div>
+                    <div class="sunrise"></div>
+                </div>
+                <div class="insight-box" class="humidity">
+                    <div class="name">Sunset <span class="material-symbols-outlined">wb_twilight</span></div>
+                    <div class="sunset"></div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="prediction">
+            <h3>Next Days</h3>
+            <div class="graph">
+                <canvas id="forecastChart"></canvas>
+            </div>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
